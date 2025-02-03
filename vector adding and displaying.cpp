@@ -8,13 +8,12 @@ void add(vector<int>& arr , int n){
 	}
 }
 
-void display(vector<int>& arr) {  // No const
-    arr[0] = 100; // Accidental modification
-    for (int num : arr) {
-        cout << num << " ";
-    }
+void display(const vector<int>& arr){ // i used constant because the display function is only to read the vector not to modifies
+	cout <<" Displaying the elements of vector " << endl;
+	for(int num : arr){
+		cout << num;
+	}
 }
-
 int main(){
 	int n; cin >> n;
 	vector<int> arr(n);
